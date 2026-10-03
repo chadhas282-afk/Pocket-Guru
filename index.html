@@ -145,3 +145,8 @@
       document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', dateOptions);
     </script>
     <script type="module" src="./main.js"></script>
+    <div id="toast-container" class="toast-container"></div>
+    <div id="custom-modal" class="modal-overlay hidden">
+      <div class="modal-box glass-panel">
+        <h3 id="modal-title">Notice</h3>
+        <p id="modal-message">Message goes here.</p>
