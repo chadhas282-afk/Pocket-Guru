@@ -1,65 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PocketGuru - Student Budget AI</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <div class="bg-orb orb-1"></div>
-    <div class="bg-orb orb-2"></div>
-    <div class="bg-orb orb-3"></div>
-    <div id="app" class="dashboard-layout">
-      <aside class="sidebar glass-panel">
-        <div class="brand">
-          <img src="/logo.png" alt="PocketGuru Logo" class="brand-logo">
-          <h2>PocketGuru</h2>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PocketGuru - Student Budget AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+  <div id="app" class="dashboard-layout">
+    <aside class="sidebar glass-panel">
+      <div class="brand">
+        <img src="/logo.png" alt="PocketGuru Logo" class="brand-logo">
+        <h2>PocketGuru</h2>
+      </div>
+      <nav class="nav-menu">
+        <a href="#" class="nav-item active">
+          <span class="nav-icon">📊</span>
+          Budget Engine
+        </a>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <header class="top-header">
+        <div>
+          <h1 class="greeting">Welcome back, Alex!</h1>
+          <p class="date-text" id="current-date">Today</p>
         </div>
-         <nav class="nav-menu">
-          <a href="#" class="nav-item active">
-            <span class="nav-icon">📊</span>
-            Budget Engine
-          </a>
-          </nav>
-      </aside>
-      <main class="main-content">
-        <header class="top-header">
-          <div>
-            <h1 class="greeting">Welcome back, Alex!</h1>
-            <p class="date-text" id="current-date">Today</p>
-          </div>
-          <button id="clear-data-btn" class="glass-btn outline-btn" aria-label="Clear saved data">Clear Data 🗑️</button>
-        </header>
-         <section id="input-section" class="fade-in">
-          <div class="grid-layout">
-            <div class="card glass-panel">
-              <div class="card-header">
-                <h2>Total Budget 💰</h2>
-                <span class="card-subtitle">Your monthly allowance</span>
-              </div>
-              <div class="form-group large-input">
-                <span class="currency-symbol">₹</span>
-                <input type="number" id="total-budget" placeholder="5000" min="0" required>
-                 </div>
+        <button id="clear-data-btn" class="glass-btn outline-btn" aria-label="Clear saved data">Clear Data 🗑️</button>
+      </header>
+      <section id="input-section" class="fade-in">
+        <div class="grid-layout">
+          <div class="card glass-panel">
+            <div class="card-header">
+              <h2>Total Budget 💰</h2>
+              <span class="card-subtitle">Your monthly allowance</span>
             </div>
-            <div class="card glass-panel">
-              <div class="card-header">
-                <h2>Fixed Expenses 🏠</h2>
-                <span class="card-subtitle">Rent, fees, bills</span>
+            <div class="form-group large-input">
+              <span class="currency-symbol">₹</span>
+              <input type="number" id="total-budget" placeholder="5000" min="0" required>
+            </div>
+          </div>
+          <div class="card glass-panel">
+            <div class="card-header">
+              <h2>Fixed Expenses 🏠</h2>
+              <span class="card-subtitle">Rent, fees, bills</span>
+            </div>
+            <div id="fixed-expenses-container" class="expense-list">
+            </div>
+            <button type="button" class="add-btn" id="add-fixed-btn">+ Add Expense</button>
+          </div>
+          <div class="card glass-panel">
+            <div class="card-header">
+              <h2>Lifestyle & Fun 🍕🎮</h2>
+              <span class="card-subtitle">Dates, movies, gaming</span>
               </div>
-              <div id="fixed-expenses-container" class="expense-list">
+              <div id="lifestyle-expenses-container" class="expense-list">
               </div>
-              <button type="button" class="add-btn" id="add-fixed-btn">+ Add Expense</button>
-              </div>
-            <div class="card glass-panel">
-              <div class="card-header">
-                <h2>Lifestyle & Fun 🍕🎮</h2>
-                <span class="card-subtitle">Dates, movies, gaming</span>
+              <button type="button" class="add-btn" id="add-lifestyle-btn">+ Add Expense</button>
+            </div>
