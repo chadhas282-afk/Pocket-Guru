@@ -140,3 +140,8 @@
         </section>
       </main>
     </div>
+     <script>
+      const dateOptions = { month: 'long', year: 'numeric' };
+      document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', dateOptions);
+    </script>
+    <script type="module" src="./main.js"></script>
