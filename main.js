@@ -43,3 +43,8 @@ function showConfirmModal(title, message, onConfirm) {
     modal.classList.add('hidden');
   });
   newConfirm.addEventListener('click', () => {
+    modal.classList.add('hidden');
+    onConfirm();
+  });
+  modal.classList.remove('hidden');
+}
