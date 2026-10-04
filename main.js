@@ -113,3 +113,8 @@ clearDataBtn.addEventListener('click', () => {
       showToast("Data has been cleared.");
     }
   );
+  });
+function autoSaveData() {
+  const totalBudget = totalBudgetInput.value;
+  const fixedExpenses = [];
+  document.querySelectorAll('#fixed-expenses-container .expense-row').forEach(row => {
