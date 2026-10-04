@@ -88,3 +88,9 @@ function loadData() {
     }
     if (parsed.lifestyleExpenses.length > 0) {
       lifestyleContainer.innerHTML = '';
+      parsed.lifestyleExpenses.forEach(exp => {
+        lifestyleContainer.appendChild(createExpenseRow('lifestyle', exp.name, exp.amount));
+      });
+    } else {
+      if (lifestyleContainer.children.length === 0) lifestyleContainer.appendChild(createExpenseRow('lifestyle'));
+    }
