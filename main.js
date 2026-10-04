@@ -13,3 +13,8 @@ const realityCheck = document.getElementById('reality-check');
 const tableBody = document.getElementById('budget-table-body');
 const totalBudgetInput = document.getElementById('total-budget');
 const guruScoreBadge = document.getElementById('guru-score');
+const exportArea = document.getElementById('export-area');
+function showToast(message) {
+  const container = document.getElementById('toast-container');
+  if (!container) return;
+  const toast = document.createElement('div');
