@@ -68,3 +68,8 @@ addLifestyleBtn.addEventListener('click', () => {
 function saveData(total, fixed, lifestyle) {
   const data = {
     totalBudget: total,
+    fixedExpenses: fixed,
+    lifestyleExpenses: lifestyle
+  };
+  localStorage.setItem('pocketguru_data', JSON.stringify(data));
+}
