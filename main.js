@@ -48,7 +48,7 @@ function showConfirmModal(title, message, onConfirm) {
     });
     modal.classList.remove('hidden');
 }
-et budgetChartInstance = null;
+let budgetChartInstance = null;
 function createExpenseRow(type, name = '', amount = '') {
     const row = document.createElement('div');
     row.className = 'expense-row';
@@ -143,3 +143,8 @@ fixedContainer.innerHTML = '';
 lifestyleContainer.innerHTML = '';
 fixedContainer.appendChild(createExpenseRow('fixed'));
 lifestyleContainer.appendChild(createExpenseRow('lifestyle'));
+function renderChart(fixed, lifestyle, essentials, emergency) {
+  const ctx = document.getElementById('budget-chart').getContext('2d');
+  if (budgetChartInstance) {
+    budgetChartInstance.destroy();
+  }
