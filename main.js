@@ -48,3 +48,8 @@ function showConfirmModal(title, message, onConfirm) {
   });
   modal.classList.remove('hidden');
 }
+et budgetChartInstance = null;
+function createExpenseRow(type, name = '', amount = '') {
+  const row = document.createElement('div');
+  row.className = 'expense-row';
+  row.innerHTML = `
