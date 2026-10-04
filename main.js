@@ -108,3 +108,8 @@ clearDataBtn.addEventListener('click', () => {
       totalBudgetInput.value = '';
       fixedContainer.innerHTML = '';
       lifestyleContainer.innerHTML = '';
+      fixedContainer.appendChild(createExpenseRow('fixed'));
+      lifestyleContainer.appendChild(createExpenseRow('lifestyle'));
+      showToast("Data has been cleared.");
+    }
+  );
