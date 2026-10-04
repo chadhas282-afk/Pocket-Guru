@@ -28,3 +28,8 @@ function showToast(message) {
 }
 function showConfirmModal(title, message, onConfirm) {
   const modal = document.getElementById('custom-modal');
+  const titleEl = document.getElementById('modal-title');
+  const messageEl = document.getElementById('modal-message');
+  const cancelBtn = document.getElementById('modal-cancel');
+  const confirmBtn = document.getElementById('modal-confirm');
+  titleEl.textContent = title;
