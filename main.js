@@ -38,3 +38,8 @@ function showConfirmModal(title, message, onConfirm) {
   const newCancel = cancelBtn.cloneNode(true);
   cancelBtn.replaceWith(newCancel);
   const newConfirm = confirmBtn.cloneNode(true);
+  confirmBtn.replaceWith(newConfirm);
+  newCancel.addEventListener('click', () => {
+    modal.classList.add('hidden');
+  });
+  newConfirm.addEventListener('click', () => {
