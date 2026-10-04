@@ -33,3 +33,8 @@ function showConfirmModal(title, message, onConfirm) {
   const cancelBtn = document.getElementById('modal-cancel');
   const confirmBtn = document.getElementById('modal-confirm');
   titleEl.textContent = title;
+  messageEl.textContent = message;
+  cancelBtn.classList.remove('hidden');
+  const newCancel = cancelBtn.cloneNode(true);
+  cancelBtn.replaceWith(newCancel);
+  const newConfirm = confirmBtn.cloneNode(true);
