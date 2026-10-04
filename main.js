@@ -63,3 +63,8 @@ addFixedBtn.addEventListener('click', () => {
   fixedContainer.appendChild(createExpenseRow('fixed'));
 });
 addLifestyleBtn.addEventListener('click', () => {
+    lifestyleContainer.appendChild(createExpenseRow('lifestyle'));
+});
+function saveData(total, fixed, lifestyle) {
+  const data = {
+    totalBudget: total,
