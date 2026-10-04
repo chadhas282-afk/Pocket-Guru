@@ -53,3 +53,8 @@ function createExpenseRow(type, name = '', amount = '') {
   const row = document.createElement('div');
   row.className = 'expense-row';
   row.innerHTML = `
+     <input type="text" class="expense-name ${type}-name" placeholder="Expense name" value="${name}" required>
+    <input type="number" class="expense-amount ${type}-amount" placeholder="Amount" min="0" value="${amount}" required>
+    <button type="button" class="remove-btn" aria-label="Remove" onclick="this.parentElement.remove()">✕</button>
+  `;
+  return row;
