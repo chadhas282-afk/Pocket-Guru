@@ -138,3 +138,8 @@ inputSection.addEventListener('click', (e) => {
 });
 setTimeout(() => showToast("Your data has been reset for a fresh start!"), 100);
 localStorage.removeItem('pocketguru_data');
+totalBudgetInput.value = '';
+fixedContainer.innerHTML = '';
+lifestyleContainer.innerHTML = '';
+fixedContainer.appendChild(createExpenseRow('fixed'));
+lifestyleContainer.appendChild(createExpenseRow('lifestyle'));
