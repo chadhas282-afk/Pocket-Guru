@@ -73,3 +73,8 @@ function saveData(total, fixed, lifestyle) {
   };
   localStorage.setItem('pocketguru_data', JSON.stringify(data));
 }
+function loadData() {
+  const data = localStorage.getItem('pocketguru_data');
+  if (data) {
+    const parsed = JSON.parse(data);
+    totalBudgetInput.value = parsed.totalBudget;
