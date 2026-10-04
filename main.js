@@ -133,3 +133,8 @@ function autoSaveData() {
 inputSection.addEventListener('input', autoSaveData);
 inputSection.addEventListener('click', (e) => {
   if (e.target.closest('.remove-btn') || e.target.closest('.add-btn')) {
+    setTimeout(autoSaveData, 10);
+  }
+});
+setTimeout(() => showToast("Your data has been reset for a fresh start!"), 100);
+localStorage.removeItem('pocketguru_data');
