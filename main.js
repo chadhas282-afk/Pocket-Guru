@@ -78,3 +78,8 @@ function loadData() {
   if (data) {
     const parsed = JSON.parse(data);
     totalBudgetInput.value = parsed.totalBudget;
+     if (parsed.fixedExpenses.length > 0) {
+      fixedContainer.innerHTML = '';
+      parsed.fixedExpenses.forEach(exp => {
+        fixedContainer.appendChild(createExpenseRow('fixed', exp.name, exp.amount));
+      });
