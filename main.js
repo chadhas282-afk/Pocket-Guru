@@ -18,3 +18,8 @@ function showToast(message) {
   const container = document.getElementById('toast-container');
   if (!container) return;
   const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.innerHTML = `<span>ℹ️</span> <div>${message}</div>`;
+  container.appendChild(toast);
+  setTimeout(() => {
+    toast.classList.add('hide');
