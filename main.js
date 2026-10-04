@@ -23,3 +23,8 @@ function showToast(message) {
   container.appendChild(toast);
   setTimeout(() => {
     toast.classList.add('hide');
+    setTimeout(() => toast.remove(), 300);
+  }, 3500);
+}
+function showConfirmModal(title, message, onConfirm) {
+  const modal = document.getElementById('custom-modal');
