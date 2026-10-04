@@ -94,3 +94,7 @@ function loadData() {
     } else {
       if (lifestyleContainer.children.length === 0) lifestyleContainer.appendChild(createExpenseRow('lifestyle'));
     }
+    } else {
+    if (fixedContainer.children.length === 0) fixedContainer.appendChild(createExpenseRow('fixed'));
+    if (lifestyleContainer.children.length === 0) lifestyleContainer.appendChild(createExpenseRow('lifestyle'));
+  }
