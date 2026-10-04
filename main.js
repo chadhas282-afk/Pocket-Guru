@@ -123,3 +123,8 @@ function autoSaveData() {
     fixedExpenses.push({ name, amount });
   });
   const lifestyleExpenses = [];
+  document.querySelectorAll('#lifestyle-expenses-container .expense-row').forEach(row => {
+    const name = row.querySelector('.lifestyle-name').value;
+    const amount = row.querySelector('.lifestyle-amount').value;
+    lifestyleExpenses.push({ name, amount });
+  });
