@@ -98,3 +98,8 @@ function loadData() {
     if (fixedContainer.children.length === 0) fixedContainer.appendChild(createExpenseRow('fixed'));
     if (lifestyleContainer.children.length === 0) lifestyleContainer.appendChild(createExpenseRow('lifestyle'));
   }
+  }
+clearDataBtn.addEventListener('click', () => {
+  showConfirmModal(
+    "Clear Data",
+    "Are you sure you want to completely clear your saved data and start over?",
