@@ -118,3 +118,8 @@ function autoSaveData() {
   const totalBudget = totalBudgetInput.value;
   const fixedExpenses = [];
   document.querySelectorAll('#fixed-expenses-container .expense-row').forEach(row => {
+    const name = row.querySelector('.fixed-name').value;
+    const amount = row.querySelector('.fixed-amount').value;
+    fixedExpenses.push({ name, amount });
+  });
+  const lifestyleExpenses = [];
