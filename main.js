@@ -103,3 +103,8 @@ clearDataBtn.addEventListener('click', () => {
   showConfirmModal(
     "Clear Data",
     "Are you sure you want to completely clear your saved data and start over?",
+    () => {
+      localStorage.removeItem('pocketguru_data');
+      totalBudgetInput.value = '';
+      fixedContainer.innerHTML = '';
+      lifestyleContainer.innerHTML = '';
