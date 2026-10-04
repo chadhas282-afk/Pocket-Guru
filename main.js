@@ -15,116 +15,121 @@ const totalBudgetInput = document.getElementById('total-budget');
 const guruScoreBadge = document.getElementById('guru-score');
 const exportArea = document.getElementById('export-area');
 function showToast(message) {
-  const container = document.getElementById('toast-container');
-  if (!container) return;
-  const toast = document.createElement('div');
-  toast.className = 'toast';
-  toast.innerHTML = `<span>ℹ️</span> <div>${message}</div>`;
-  container.appendChild(toast);
-  setTimeout(() => {
-    toast.classList.add('hide');
-    setTimeout(() => toast.remove(), 300);
-  }, 3500);
+    const container = document.getElementById('toast-container');
+    if (!container) return;
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.innerHTML = `<span>ℹ️</span> <div>${message}</div>`;
+    container.appendChild(toast);
+    setTimeout(() => {
+        toast.classList.add('hide');
+        setTimeout(() => toast.remove(), 300);
+    }, 3500);
 }
 function showConfirmModal(title, message, onConfirm) {
-  const modal = document.getElementById('custom-modal');
-  const titleEl = document.getElementById('modal-title');
-  const messageEl = document.getElementById('modal-message');
-  const cancelBtn = document.getElementById('modal-cancel');
-  const confirmBtn = document.getElementById('modal-confirm');
-  titleEl.textContent = title;
-  messageEl.textContent = message;
-  cancelBtn.classList.remove('hidden');
-  const newCancel = cancelBtn.cloneNode(true);
-  cancelBtn.replaceWith(newCancel);
-  const newConfirm = confirmBtn.cloneNode(true);
-  confirmBtn.replaceWith(newConfirm);
-  newCancel.addEventListener('click', () => {
-    modal.classList.add('hidden');
-  });
-  newConfirm.addEventListener('click', () => {
-    modal.classList.add('hidden');
-    onConfirm();
-  });
-  modal.classList.remove('hidden');
+    const modal = document.getElementById('custom-modal');
+    const titleEl = document.getElementById('modal-title');
+    const messageEl = document.getElementById('modal-message');
+    const cancelBtn = document.getElementById('modal-cancel');
+    const confirmBtn = document.getElementById('modal-confirm');
+    titleEl.textContent = title;
+    messageEl.textContent = message;
+    cancelBtn.classList.remove('hidden');
+    const newCancel = cancelBtn.cloneNode(true);
+    cancelBtn.replaceWith(newCancel);
+    const newConfirm = confirmBtn.cloneNode(true);
+    confirmBtn.replaceWith(newConfirm);
+    newCancel.addEventListener('click', () => {
+        modal.classList.add('hidden');
+    });
+    newConfirm.addEventListener('click', () => {
+        modal.classList.add('hidden');
+        onConfirm();
+    });
+    modal.classList.remove('hidden');
 }
 et budgetChartInstance = null;
 function createExpenseRow(type, name = '', amount = '') {
-  const row = document.createElement('div');
-  row.className = 'expense-row';
-  row.innerHTML = `
+    const row = document.createElement('div');
+    row.className = 'expense-row';
+    row.innerHTML = `
      <input type="text" class="expense-name ${type}-name" placeholder="Expense name" value="${name}" required>
     <input type="number" class="expense-amount ${type}-amount" placeholder="Amount" min="0" value="${amount}" required>
     <button type="button" class="remove-btn" aria-label="Remove" onclick="this.parentElement.remove()">✕</button>
   `;
-  return row;
-  }
+    return row;
+}
 addFixedBtn.addEventListener('click', () => {
-  fixedContainer.appendChild(createExpenseRow('fixed'));
+    fixedContainer.appendChild(createExpenseRow('fixed'));
 });
 addLifestyleBtn.addEventListener('click', () => {
     lifestyleContainer.appendChild(createExpenseRow('lifestyle'));
 });
 function saveData(total, fixed, lifestyle) {
-  const data = {
-    totalBudget: total,
-    fixedExpenses: fixed,
-    lifestyleExpenses: lifestyle
-  };
-  localStorage.setItem('pocketguru_data', JSON.stringify(data));
+    const data = {
+        totalBudget: total,
+        fixedExpenses: fixed,
+        lifestyleExpenses: lifestyle
+    };
+    localStorage.setItem('pocketguru_data', JSON.stringify(data));
 }
 function loadData() {
-  const data = localStorage.getItem('pocketguru_data');
-  if (data) {
-    const parsed = JSON.parse(data);
-    totalBudgetInput.value = parsed.totalBudget;
-     if (parsed.fixedExpenses.length > 0) {
-      fixedContainer.innerHTML = '';
-      parsed.fixedExpenses.forEach(exp => {
-        fixedContainer.appendChild(createExpenseRow('fixed', exp.name, exp.amount));
-      });
-      } else {
-      if (fixedContainer.children.length === 0) fixedContainer.appendChild(createExpenseRow('fixed'));
-    }
-    if (parsed.lifestyleExpenses.length > 0) {
-      lifestyleContainer.innerHTML = '';
-      parsed.lifestyleExpenses.forEach(exp => {
-        lifestyleContainer.appendChild(createExpenseRow('lifestyle', exp.name, exp.amount));
-      });
+    const data = localStorage.getItem('pocketguru_data');
+    if (data) {
+        const parsed = JSON.parse(data);
+        totalBudgetInput.value = parsed.totalBudget;
+        if (parsed.fixedExpenses.length > 0) {
+            fixedContainer.innerHTML = '';
+            parsed.fixedExpenses.forEach(exp => {
+                fixedContainer.appendChild(createExpenseRow('fixed', exp.name, exp.amount));
+            });
+        } else {
+            if (fixedContainer.children.length === 0) fixedContainer.appendChild(createExpenseRow('fixed'));
+        }
+        if (parsed.lifestyleExpenses.length > 0) {
+            lifestyleContainer.innerHTML = '';
+            parsed.lifestyleExpenses.forEach(exp => {
+                lifestyleContainer.appendChild(createExpenseRow('lifestyle', exp.name, exp.amount));
+            });
+        } else {
+            if (lifestyleContainer.children.length === 0) lifestyleContainer.appendChild(createExpenseRow('lifestyle'));
+        }
     } else {
-      if (lifestyleContainer.children.length === 0) lifestyleContainer.appendChild(createExpenseRow('lifestyle'));
+        if (fixedContainer.children.length === 0) fixedContainer.appendChild(createExpenseRow('fixed'));
+        if (lifestyleContainer.children.length === 0) lifestyleContainer.appendChild(createExpenseRow('lifestyle'));
     }
-    } else {
-    if (fixedContainer.children.length === 0) fixedContainer.appendChild(createExpenseRow('fixed'));
-    if (lifestyleContainer.children.length === 0) lifestyleContainer.appendChild(createExpenseRow('lifestyle'));
-  }
-  }
+}
 clearDataBtn.addEventListener('click', () => {
-  showConfirmModal(
-    "Clear Data",
-    "Are you sure you want to completely clear your saved data and start over?",
-    () => {
-      localStorage.removeItem('pocketguru_data');
-      totalBudgetInput.value = '';
-      fixedContainer.innerHTML = '';
-      lifestyleContainer.innerHTML = '';
-      fixedContainer.appendChild(createExpenseRow('fixed'));
-      lifestyleContainer.appendChild(createExpenseRow('lifestyle'));
-      showToast("Data has been cleared.");
-    }
-  );
-  });
+    showConfirmModal(
+        "Clear Data",
+        "Are you sure you want to completely clear your saved data and start over?",
+        () => {
+            localStorage.removeItem('pocketguru_data');
+            totalBudgetInput.value = '';
+            fixedContainer.innerHTML = '';
+            lifestyleContainer.innerHTML = '';
+            fixedContainer.appendChild(createExpenseRow('fixed'));
+            lifestyleContainer.appendChild(createExpenseRow('lifestyle'));
+            showToast("Data has been cleared.");
+        }
+    );
+});
 function autoSaveData() {
-  const totalBudget = totalBudgetInput.value;
-  const fixedExpenses = [];
-  document.querySelectorAll('#fixed-expenses-container .expense-row').forEach(row => {
-    const name = row.querySelector('.fixed-name').value;
-    const amount = row.querySelector('.fixed-amount').value;
-    fixedExpenses.push({ name, amount });
-  });
-  const lifestyleExpenses = [];
-  document.querySelectorAll('#lifestyle-expenses-container .expense-row').forEach(row => {
-    const name = row.querySelector('.lifestyle-name').value;
-    const amount = row.querySelector('.lifestyle-amount').value;
-    lifestyleExpenses.push({ name, amount });
-  });
+    const totalBudget = totalBudgetInput.value;
+    const fixedExpenses = [];
+    document.querySelectorAll('#fixed-expenses-container .expense-row').forEach(row => {
+        const name = row.querySelector('.fixed-name').value;
+        const amount = row.querySelector('.fixed-amount').value;
+        fixedExpenses.push({ name, amount });
+    });
+    const lifestyleExpenses = [];
+    document.querySelectorAll('#lifestyle-expenses-container .expense-row').forEach(row => {
+        const name = row.querySelector('.lifestyle-name').value;
+        const amount = row.querySelector('.lifestyle-amount').value;
+        lifestyleExpenses.push({ name, amount });
+    });
+    saveData(totalBudget, fixedExpenses, lifestyleExpenses);
+}
+inputSection.addEventListener('input', autoSaveData);
+inputSection.addEventListener('click', (e) => {
+  if (e.target.closest('.remove-btn') || e.target.closest('.add-btn')) {
