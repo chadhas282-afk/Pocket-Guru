@@ -83,3 +83,8 @@ function loadData() {
       parsed.fixedExpenses.forEach(exp => {
         fixedContainer.appendChild(createExpenseRow('fixed', exp.name, exp.amount));
       });
+      } else {
+      if (fixedContainer.children.length === 0) fixedContainer.appendChild(createExpenseRow('fixed'));
+    }
+    if (parsed.lifestyleExpenses.length > 0) {
+      lifestyleContainer.innerHTML = '';
