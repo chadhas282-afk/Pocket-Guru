@@ -58,3 +58,8 @@ function createExpenseRow(type, name = '', amount = '') {
     <button type="button" class="remove-btn" aria-label="Remove" onclick="this.parentElement.remove()">✕</button>
   `;
   return row;
+  }
+addFixedBtn.addEventListener('click', () => {
+  fixedContainer.appendChild(createExpenseRow('fixed'));
+});
+addLifestyleBtn.addEventListener('click', () => {
