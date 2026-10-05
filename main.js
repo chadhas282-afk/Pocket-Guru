@@ -253,3 +253,9 @@ calculateBtn.addEventListener('click', () => {
     guruScoreBadge.textContent = `Score: ${score}/10 (Yikes!)`;
   }
   fixedExpenses.forEach(exp => {
+    resultData.push({ category: 'Fixed', item: exp.name, amount: exp.amount, tip: "Pay on time!" });
+    finalAllocated += exp.amount;
+  });
+  lifestyleExpenses.forEach(exp => {
+    resultData.push({ category: 'Lifestyle', item: exp.name, amount: exp.amount, tip: "Use student ID for discounts." });
+    finalAllocated += exp.amount;
