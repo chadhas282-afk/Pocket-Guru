@@ -188,3 +188,8 @@ calculateBtn.addEventListener('click', () => {
   const fixedExpenses = [];
   let totalFixed = 0;
   document.querySelectorAll('.expense-row').forEach(row => {
+     if (row.querySelector('.fixed-name')) {
+      const name = row.querySelector('.fixed-name').value.trim();
+      const amount = parseFloat(row.querySelector('.fixed-amount').value);
+      if (name && !isNaN(amount)) {
+        fixedExpenses.push({ name, amount });
