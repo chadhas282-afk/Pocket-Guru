@@ -178,3 +178,8 @@ function renderChart(fixed, lifestyle, essentials, emergency) {
       }
     }
   });
+  }
+calculateBtn.addEventListener('click', () => {
+  const totalBudget = parseFloat(totalBudgetInput.value);
+  if (isNaN(totalBudget) || totalBudget <= 0) {
+    alert("Bhai, enter a valid total budget first!");
