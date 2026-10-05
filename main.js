@@ -223,3 +223,8 @@ calculateBtn.addEventListener('click', () => {
     realityCheck.innerHTML = `<strong>Reality Check:</strong> Bhai, you're requesting ₹${totalRequested}, but you only have ₹${totalBudget}. Short by ₹${Math.abs(remaining)}.<br>I'm heavily deducting from your lifestyle to make the math work!`;
     const ratio = Math.max(0, (totalBudget - totalFixed) / totalLifestyle);
     lifestyleExpenses.forEach(exp => {
+        exp.amount = Math.floor(exp.amount * ratio);
+    });
+    totalLifestyle = lifestyleExpenses.reduce((sum, exp) => sum + exp.amount, 0);
+    remaining = totalBudget - (totalFixed + totalLifestyle);
+    if (remaining < 0) {
