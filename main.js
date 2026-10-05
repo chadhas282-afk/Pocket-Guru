@@ -273,3 +273,8 @@ calculateBtn.addEventListener('click', () => {
     essentials.forEach((ess, index) => {
       let amount = index === essentials.length - 1 ? remaining - essentialsTotal : Math.round(remaining * ess.percentage);
       essentialsTotal += amount;
+      if (amount > 0) {
+        resultData.push({ category: 'Essentials', item: ess.name, amount: amount, tip: ess.tip });
+        finalAllocated += amount;
+        if (ess.name.includes("Emergency")) totalEmergencyChart += amount;
+        else totalEssentialsChart += amount;
