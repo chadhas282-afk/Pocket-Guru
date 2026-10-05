@@ -163,3 +163,8 @@ function renderChart(fixed, lifestyle, essentials, emergency) {
         borderWidth: 0,
         hoverOffset: 4
       }]
+      },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
