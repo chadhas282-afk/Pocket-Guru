@@ -193,3 +193,8 @@ calculateBtn.addEventListener('click', () => {
       const amount = parseFloat(row.querySelector('.fixed-amount').value);
       if (name && !isNaN(amount)) {
         fixedExpenses.push({ name, amount });
+        totalFixed += amount;
+      }
+    }
+  });
+  const lifestyleExpenses = [];
