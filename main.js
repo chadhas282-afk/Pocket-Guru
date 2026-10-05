@@ -153,3 +153,8 @@ function renderChart(fixed, lifestyle, essentials, emergency) {
     data: {
       labels: ['Fixed', 'Lifestyle', 'Essentials', 'Emergency/Savings'],
       datasets: [{
+         data: [fixed, lifestyle, essentials, emergency],
+        backgroundColor: [
+          '#a855f7',
+          '#ec4899',
+          '#06b6d4',
