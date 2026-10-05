@@ -283,3 +283,8 @@ calculateBtn.addEventListener('click', () => {
   }
   tableBody.innerHTML = '';
   resultData.forEach(row => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td><span class="category-badge">${row.category}</span></td>
+      <td><strong>${row.item}</strong></td>
+      <td>₹${row.amount}</td>
