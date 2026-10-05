@@ -213,3 +213,8 @@ calculateBtn.addEventListener('click', () => {
   const totalRequested = totalFixed + totalLifestyle;
   let remaining = totalBudget - totalRequested;
   realityCheck.classList.add('hidden');
+  realityCheck.innerHTML = '';
+  let resultData = [];
+  let finalAllocated = 0;
+  let isRealityCheckTriggered = false;
+  if (remaining < 0) {
