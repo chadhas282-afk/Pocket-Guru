@@ -208,3 +208,8 @@ calculateBtn.addEventListener('click', () => {
         totalLifestyle += amount;
       }
     }
+    });
+  saveData(totalBudget, fixedExpenses, lifestyleExpenses);
+  const totalRequested = totalFixed + totalLifestyle;
+  let remaining = totalBudget - totalRequested;
+  realityCheck.classList.add('hidden');
