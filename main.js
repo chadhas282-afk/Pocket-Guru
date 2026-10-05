@@ -203,3 +203,8 @@ calculateBtn.addEventListener('click', () => {
     if (row.querySelector('.lifestyle-name')) {
       const name = row.querySelector('.lifestyle-name').value.trim();
       const amount = parseFloat(row.querySelector('.lifestyle-amount').value);
+       if (name && !isNaN(amount)) {
+        lifestyleExpenses.push({ name, amount });
+        totalLifestyle += amount;
+      }
+    }
