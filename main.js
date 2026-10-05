@@ -233,3 +233,8 @@ calculateBtn.addEventListener('click', () => {
   }
   let score = 10;
   if (isRealityCheckTriggered) score -= 4;
+   if (totalFixed > totalBudget * 0.6) score -= 2;
+  if (totalLifestyle > totalBudget * 0.3) score -= 2;
+  score = Math.max(1, score);
+  if (score >= 8) {
+    guruScoreBadge.style.color = 'var(--success-color)';
