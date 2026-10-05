@@ -173,3 +173,8 @@ function renderChart(fixed, lifestyle, essentials, emergency) {
           labels: {
             color: '#f8fafc',
             font: { family: 'Outfit', size: 14 }
+            }
+        }
+      }
+    }
+  });
