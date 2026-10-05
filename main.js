@@ -183,3 +183,8 @@ calculateBtn.addEventListener('click', () => {
   const totalBudget = parseFloat(totalBudgetInput.value);
   if (isNaN(totalBudget) || totalBudget <= 0) {
     alert("Bhai, enter a valid total budget first!");
+    return;
+  }
+  const fixedExpenses = [];
+  let totalFixed = 0;
+  document.querySelectorAll('.expense-row').forEach(row => {
