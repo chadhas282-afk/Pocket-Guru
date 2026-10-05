@@ -293,3 +293,8 @@ calculateBtn.addEventListener('click', () => {
     tableBody.appendChild(tr);
   });
   document.getElementById('summary-total').textContent = totalBudget;
+  document.getElementById('summary-allocated').textContent = finalAllocated;
+  renderChart(totalFixed, totalLifestyle, totalEssentialsChart, totalEmergencyChart);
+  inputSection.classList.add('hidden');
+  const loadingSection = document.getElementById('loading-section');
+  loadingSection.classList.remove('hidden');
