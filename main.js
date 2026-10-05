@@ -278,3 +278,8 @@ calculateBtn.addEventListener('click', () => {
         finalAllocated += amount;
         if (ess.name.includes("Emergency")) totalEmergencyChart += amount;
         else totalEssentialsChart += amount;
+        }
+    });
+  }
+  tableBody.innerHTML = '';
+  resultData.forEach(row => {
