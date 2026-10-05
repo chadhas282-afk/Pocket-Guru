@@ -148,3 +148,8 @@ function renderChart(fixed, lifestyle, essentials, emergency) {
   if (budgetChartInstance) {
     budgetChartInstance.destroy();
   }
+  budgetChartInstance = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Fixed', 'Lifestyle', 'Essentials', 'Emergency/Savings'],
+      datasets: [{
