@@ -228,3 +228,8 @@ calculateBtn.addEventListener('click', () => {
     totalLifestyle = lifestyleExpenses.reduce((sum, exp) => sum + exp.amount, 0);
     remaining = totalBudget - (totalFixed + totalLifestyle);
     if (remaining < 0) {
+        realityCheck.innerHTML += `<br><em>Warning: Fixed expenses (₹${totalFixed}) exceed budget! Time to get a side hustle.</em>`;
+    }
+  }
+  let score = 10;
+  if (isRealityCheckTriggered) score -= 4;
