@@ -168,3 +168,8 @@ function renderChart(fixed, lifestyle, essentials, emergency) {
       responsive: true,
       maintainAspectRatio: false,
       plugins: {
+        legend: {
+          position: 'right',
+          labels: {
+            color: '#f8fafc',
+            font: { family: 'Outfit', size: 14 }
