@@ -158,3 +158,8 @@ function renderChart(fixed, lifestyle, essentials, emergency) {
           '#a855f7',
           '#ec4899',
           '#06b6d4',
+          '#10b981'
+        ],
+        borderWidth: 0,
+        hoverOffset: 4
+      }]
