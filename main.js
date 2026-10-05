@@ -268,3 +268,8 @@ calculateBtn.addEventListener('click', () => {
       { name: "Travel (Auto/Metro)", percentage: 0.30, tip: "Share an auto or use metro." },
       { name: "Books", percentage: 0.10, tip: "Buy second-hand." },
       { name: "Emergency Buffer", percentage: 0.10, tip: "Keep this safe!" }
+      ];
+    let essentialsTotal = 0;
+    essentials.forEach((ess, index) => {
+      let amount = index === essentials.length - 1 ? remaining - essentialsTotal : Math.round(remaining * ess.percentage);
+      essentialsTotal += amount;
