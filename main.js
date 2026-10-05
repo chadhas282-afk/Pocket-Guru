@@ -263,3 +263,8 @@ calculateBtn.addEventListener('click', () => {
   let totalEssentialsChart = 0;
   let totalEmergencyChart = 0;
   if (remaining > 0) {
+    const essentials = [
+      { name: "Daily Food / Canteen", percentage: 0.50, tip: "Eat at college canteen." },
+      { name: "Travel (Auto/Metro)", percentage: 0.30, tip: "Share an auto or use metro." },
+      { name: "Books", percentage: 0.10, tip: "Buy second-hand." },
+      { name: "Emergency Buffer", percentage: 0.10, tip: "Keep this safe!" }
