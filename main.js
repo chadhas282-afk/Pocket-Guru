@@ -243,3 +243,8 @@ calculateBtn.addEventListener('click', () => {
     guruScoreBadge.textContent = `Score: ${score}/10 (Solid!)`;
   } else if (score >= 5) {
     guruScoreBadge.style.color = '#f59e0b';
+    guruScoreBadge.style.background = 'rgba(245, 158, 11, 0.2)';
+    guruScoreBadge.style.borderColor = 'rgba(245, 158, 11, 0.4)';
+    guruScoreBadge.textContent = `Score: ${score}/10 (Careful!)`;
+  } else {
+    guruScoreBadge.style.color = 'var(--danger-color)';
