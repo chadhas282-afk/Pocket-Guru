@@ -248,3 +248,8 @@ calculateBtn.addEventListener('click', () => {
     guruScoreBadge.textContent = `Score: ${score}/10 (Careful!)`;
   } else {
     guruScoreBadge.style.color = 'var(--danger-color)';
+    guruScoreBadge.style.background = 'rgba(239, 68, 68, 0.2)';
+    guruScoreBadge.style.borderColor = 'rgba(239, 68, 68, 0.4)';
+    guruScoreBadge.textContent = `Score: ${score}/10 (Yikes!)`;
+  }
+  fixedExpenses.forEach(exp => {
