@@ -259,3 +259,7 @@ calculateBtn.addEventListener('click', () => {
   lifestyleExpenses.forEach(exp => {
     resultData.push({ category: 'Lifestyle', item: exp.name, amount: exp.amount, tip: "Use student ID for discounts." });
     finalAllocated += exp.amount;
+     });
+  let totalEssentialsChart = 0;
+  let totalEmergencyChart = 0;
+  if (remaining > 0) {
