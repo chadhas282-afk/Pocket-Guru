@@ -198,3 +198,8 @@ calculateBtn.addEventListener('click', () => {
     }
   });
   const lifestyleExpenses = [];
+   let totalLifestyle = 0;
+  document.querySelectorAll('.expense-row').forEach(row => {
+    if (row.querySelector('.lifestyle-name')) {
+      const name = row.querySelector('.lifestyle-name').value.trim();
+      const amount = parseFloat(row.querySelector('.lifestyle-amount').value);
