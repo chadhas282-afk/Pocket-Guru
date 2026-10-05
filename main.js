@@ -288,3 +288,8 @@ calculateBtn.addEventListener('click', () => {
       <td><span class="category-badge">${row.category}</span></td>
       <td><strong>${row.item}</strong></td>
       <td>₹${row.amount}</td>
+      <td><em>${row.tip}</em></td>
+    `;
+    tableBody.appendChild(tr);
+  });
+  document.getElementById('summary-total').textContent = totalBudget;
