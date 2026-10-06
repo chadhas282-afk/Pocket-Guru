@@ -38,3 +38,8 @@ body {
 .orb-1 {
   top: -10%;
   left: -5%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, var(--primary-neon), transparent 70%);
+}
+.orb-2 {
