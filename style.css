@@ -53,3 +53,8 @@ body {
   top: 40%;
   left: 40%;
   width: 30vw;
+  height: 30vw;
+  background: radial-gradient(circle, var(--accent-neon), transparent 70%);
+  opacity: 0.2;
+}
+.dashboard-layout {
