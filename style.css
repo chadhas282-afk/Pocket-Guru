@@ -43,3 +43,8 @@ body {
   background: radial-gradient(circle, var(--primary-neon), transparent 70%);
 }
 .orb-2 {
+    bottom: -10%;
+  right: -5%;
+  width: 40vw;
+  height: 40vw;
+  background: radial-gradient(circle, var(--secondary-neon), transparent 70%);
