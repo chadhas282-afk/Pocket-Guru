@@ -3,3 +3,8 @@
   --bg-gradient-start: #140d36;
   --bg-gradient-end: #070514;
   --glass-bg: rgba(26, 22, 53, 0.5);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  --primary-neon: #a855f7;
+  --primary-hover: #c084fc;
+  --secondary-neon: #06b6d4;
