@@ -318,3 +318,8 @@ recalculateBtn.addEventListener('click', () => {
   inputSection.classList.remove('hidden');
   inputSection.classList.add('fade-in');
   window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+downloadBtn.addEventListener('click', () => {
+  html2canvas(exportArea, {
+    backgroundColor: '#0f172a',
+    scale: 2
