@@ -58,3 +58,8 @@ body {
   opacity: 0.2;
 }
 .dashboard-layout {
+    display: flex;
+  min-height: 100vh;
+}
+.sidebar {
+  width: 260px;
