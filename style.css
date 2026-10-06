@@ -83,3 +83,8 @@ body {
 .brand h2 {
   font-size: 1.5rem;
   font-weight: 700;
+  background: linear-gradient(to right, var(--text-main), var(--text-muted));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav-menu {
