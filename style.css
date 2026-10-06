@@ -108,3 +108,8 @@ body {
   background: rgba(255, 255, 255, 0.05);
   color: var(--text-main);
   transform: translateX(4px);
+  }
+.nav-item.active {
+  background: linear-gradient(90deg, rgba(168, 85, 247, 0.2), transparent);
+  color: var(--primary-hover);
+  border-left: 3px solid var(--primary-neon);
