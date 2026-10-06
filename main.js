@@ -308,3 +308,8 @@ calculateBtn.addEventListener('click', () => {
         particleCount: 150,
         spread: 70,
         origin: { y: 0.6 },
+        colors: ['#8b5cf6', '#3b82f6', '#10b981', '#f59e0b']
+      });
+    }
+  }, 4000);
+});
