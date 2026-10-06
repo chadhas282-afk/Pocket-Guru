@@ -23,3 +23,8 @@
 body {
   font-family: 'Outfit', sans-serif;
   background-color: var(--bg-base);
+  color: var(--text-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
