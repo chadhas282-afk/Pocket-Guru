@@ -113,3 +113,8 @@ body {
   background: linear-gradient(90deg, rgba(168, 85, 247, 0.2), transparent);
   color: var(--primary-hover);
   border-left: 3px solid var(--primary-neon);
+  }
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 2rem;
+  border-top: 1px solid var(--glass-border);
