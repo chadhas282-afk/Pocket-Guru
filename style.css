@@ -63,3 +63,8 @@ body {
 }
 .sidebar {
   width: 260px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  border-right: 1px solid var(--glass-border);
+}
