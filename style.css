@@ -78,3 +78,8 @@ body {
   width: 42px;
   height: 42px;
   border-radius: 12px;
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+}
+.brand h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
