@@ -298,3 +298,8 @@ calculateBtn.addEventListener('click', () => {
   inputSection.classList.add('hidden');
   const loadingSection = document.getElementById('loading-section');
   loadingSection.classList.remove('hidden');
+  loadingSection.classList.add('fade-in');
+  setTimeout(() => {
+    loadingSection.classList.add('hidden');
+    resultsSection.classList.remove('hidden');
+    resultsSection.classList.add('fade-in');
