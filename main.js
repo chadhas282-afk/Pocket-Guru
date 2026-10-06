@@ -313,3 +313,8 @@ calculateBtn.addEventListener('click', () => {
     }
   }, 4000);
 });
+recalculateBtn.addEventListener('click', () => {
+  resultsSection.classList.add('hidden');
+  inputSection.classList.remove('hidden');
+  inputSection.classList.add('fade-in');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
