@@ -88,3 +88,8 @@ body {
   -webkit-text-fill-color: transparent;
 }
 .nav-menu {
+    display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
