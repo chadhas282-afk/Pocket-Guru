@@ -223,3 +223,8 @@ greeting {
   font-size: 2rem;
   font-weight: 600;
   color: #fff;
+   font-family: inherit;
+  transition: all 0.3s ease;
+}
+.large-input input:focus {
+  outline: none;
