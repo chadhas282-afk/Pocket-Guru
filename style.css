@@ -123,3 +123,8 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
+  }
+.avatar {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem;
+  border-radius: 50%;
