@@ -213,3 +213,8 @@ greeting {
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--primary-neon);
+  }
+.large-input input {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--glass-border);
