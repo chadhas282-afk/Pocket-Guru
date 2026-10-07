@@ -228,3 +228,8 @@ greeting {
 }
 .large-input input:focus {
   outline: none;
+  border-color: var(--primary-neon);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
+}
+.expense-row {
+  display: flex;
