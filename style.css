@@ -203,3 +203,8 @@ greeting {
   gap: 1.5rem;
 }
 .large-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.currency-symbol {
