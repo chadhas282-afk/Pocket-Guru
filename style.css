@@ -154,3 +154,7 @@ body {
   align-items: flex-end;
   margin-bottom: 2.5rem;
 }
+greeting {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
