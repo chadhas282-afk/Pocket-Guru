@@ -163,3 +163,8 @@ greeting {
   color: var(--text-muted);
   font-size: 1.1rem;
 }
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
