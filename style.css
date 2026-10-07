@@ -188,3 +188,8 @@ greeting {
   margin-bottom: 0.25rem;
 }
 .card-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.grid-layout {
+  display: grid;
