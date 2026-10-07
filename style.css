@@ -258,3 +258,8 @@ greeting {
   background: rgba(255, 255, 255, 0.03);
 }
 .remove-btn {
+  background: transparent;
+  color: var(--text-muted);
+  border: none;
+  border-radius: 6px;
+  width: 36px;
