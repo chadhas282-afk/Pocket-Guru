@@ -158,3 +158,8 @@ greeting {
   font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 0.25rem;
+  }
+.date-text {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
