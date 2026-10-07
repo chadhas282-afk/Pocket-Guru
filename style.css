@@ -168,3 +168,8 @@ greeting {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+.card {
+  border-radius: 20px;
+  padding: 1.5rem;
