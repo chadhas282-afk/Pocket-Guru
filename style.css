@@ -208,3 +208,8 @@ greeting {
   align-items: center;
 }
 .currency-symbol {
+  position: absolute;
+  left: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-neon);
