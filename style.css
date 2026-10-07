@@ -248,3 +248,8 @@ greeting {
   font-size: 0.95rem;
   transition: all 0.3s ease;
   min-width: 0;
+  width: 100%;
+}
+.expense-row input[type="text"] { flex: 1.5; }
+.expense-row input[type="number"] { flex: 1; }
+.expense-row input:focus {
