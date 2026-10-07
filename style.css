@@ -138,3 +138,8 @@ body {
   font-weight: 600;
   font-size: 0.95rem;
 }
+.user-role {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+.main-content {
