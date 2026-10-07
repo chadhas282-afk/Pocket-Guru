@@ -148,3 +148,9 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.5rem;
+}
