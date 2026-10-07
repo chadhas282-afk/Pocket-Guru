@@ -198,3 +198,8 @@ greeting {
   margin-bottom: 2rem;
 }
 .results-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.5rem;
+}
+.large-input {
