@@ -133,3 +133,8 @@ body {
 .user-info {
   display: flex;
   flex-direction: column;
+  }
+.user-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
