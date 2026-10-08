@@ -313,3 +313,8 @@ greeting {
   border: 1px solid var(--glass-border);
   color: #fff;
   border-radius: 30px;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
