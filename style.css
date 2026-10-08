@@ -373,3 +373,8 @@ greeting {
   flex-direction: column;
   align-items: center;
 }
+.chart-wrapper {
+  position: relative;
+  height: 220px;
+  width: 100%;
+  margin: 1rem 0;
