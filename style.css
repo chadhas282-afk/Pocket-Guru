@@ -413,3 +413,8 @@ table {
   border-spacing: 0 0.5rem;
 }
 th {
+  padding: 0 1rem 0.5rem 1rem;
+  text-align: left;
+  font-weight: 500;
+  color: var(--text-muted);
+  font-size: 0.9rem;
