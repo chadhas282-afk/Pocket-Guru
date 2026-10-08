@@ -343,3 +343,8 @@ greeting {
 .export-container {
   border-radius: 20px;
   padding: 1rem 0;
+  }
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
