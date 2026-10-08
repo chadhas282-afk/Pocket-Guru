@@ -288,3 +288,8 @@ greeting {
   color: var(--secondary-neon);
   background: rgba(6, 182, 212, 0.05);
 }
+.action-row {
+  display: flex;
+  justify-content: center;
+}
+.primary-btn {
