@@ -273,3 +273,8 @@ greeting {
 .add-btn {
   background: transparent;
   color: var(--text-muted);
+  border: 1px dashed var(--glass-border);
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
