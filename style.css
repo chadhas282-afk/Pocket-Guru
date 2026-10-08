@@ -393,3 +393,8 @@ greeting {
   align-items: center;
 }
 .stat-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
