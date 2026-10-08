@@ -303,3 +303,8 @@ greeting {
   font-family: inherit;
   cursor: pointer;
   transition: all 0.3s ease;
+  }
+.glow-effect:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(168, 85, 247, 0.5);
+}
