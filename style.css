@@ -348,3 +348,8 @@ greeting {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 2rem;
+}
+.score-badge {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--success-color);
