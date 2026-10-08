@@ -318,3 +318,8 @@ greeting {
   font-weight: 500;
   font-family: inherit;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+.glass-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
