@@ -268,3 +268,8 @@ greeting {
 }
 .remove-btn:hover {
   background: rgba(239, 68, 68, 0.2);
+  color: var(--danger-color);
+}
+.add-btn {
+  background: transparent;
+  color: var(--text-muted);
