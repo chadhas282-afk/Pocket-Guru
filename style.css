@@ -403,3 +403,8 @@ greeting {
   font-weight: 700;
   color: #fff;
 }
+.table-responsive {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+table {
