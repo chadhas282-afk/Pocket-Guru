@@ -333,3 +333,8 @@ greeting {
 }
 .outline-btn:hover {
   background: rgba(239, 68, 68, 0.15);
+  }
+.action-buttons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
