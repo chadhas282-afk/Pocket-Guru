@@ -368,3 +368,8 @@ greeting {
   margin-bottom: 2rem;
   font-size: 1.05rem;
 }
+.chart-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
