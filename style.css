@@ -358,3 +358,8 @@ greeting {
   font-weight: 600;
   font-size: 1.1rem;
   border: 1px solid rgba(16, 185, 129, 0.3);
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+}
+.warning-box {
+  background: rgba(245, 158, 11, 0.1);
+  border-left: 4px solid var(--warning-color);
