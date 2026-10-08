@@ -363,3 +363,8 @@ greeting {
 .warning-box {
   background: rgba(245, 158, 11, 0.1);
   border-left: 4px solid var(--warning-color);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
