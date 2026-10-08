@@ -328,3 +328,8 @@ greeting {
   border-color: var(--danger-color);
   color: var(--danger-color);
   background: transparent;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+}
+.outline-btn:hover {
+  background: rgba(239, 68, 68, 0.15);
