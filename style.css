@@ -293,3 +293,8 @@ greeting {
   justify-content: center;
 }
 .primary-btn {
+   background: linear-gradient(135deg, var(--primary-neon), var(--secondary-neon));
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 1rem 3rem;
