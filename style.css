@@ -323,3 +323,8 @@ greeting {
 .glass-btn:hover {
   background: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
+  }
+.outline-btn {
+  border-color: var(--danger-color);
+  color: var(--danger-color);
+  background: transparent;
