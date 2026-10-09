@@ -428,3 +428,8 @@ td {
   border-bottom: 1px solid transparent;
 }
 td:first-child {
+  border-radius: 8px 0 0 8px;
+  border-left: 1px solid transparent;
+}
+td:last-child {
+  border-radius: 0 8px 8px 0;
