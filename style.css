@@ -503,3 +503,8 @@ tbody tr:hover td {
   }
   .large-input input {
     font-size: 1.5rem;
+     padding: 0.8rem 0.8rem 0.8rem 2.5rem;
+  }
+  .currency-symbol {
+    font-size: 1.2rem;
+    left: 0.8rem;
