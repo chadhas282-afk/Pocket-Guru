@@ -553,3 +553,8 @@ tbody tr:hover td {
   right: 20px;
   z-index: 9999;
   display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.toast {
+  background: rgba(15, 23, 42, 0.9);
