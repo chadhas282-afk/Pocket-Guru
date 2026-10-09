@@ -468,3 +468,8 @@ tbody tr:hover td {
   }
   .sidebar {
     width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--glass-border);
+    padding: 1rem 1.5rem;
+    flex-direction: row;
+    justify-content: space-between;
