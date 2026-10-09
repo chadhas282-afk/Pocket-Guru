@@ -478,3 +478,8 @@ tbody tr:hover td {
   .brand {
     margin-bottom: 0;
   }
+  .nav-menu, .sidebar-footer {
+    display: none; 
+  }
+  .results-grid {
+    grid-template-columns: 1fr;
