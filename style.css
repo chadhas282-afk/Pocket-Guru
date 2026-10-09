@@ -558,3 +558,8 @@ tbody tr:hover td {
 }
 .toast {
   background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--primary-neon);
+  color: #fff;
+  padding: 15px 20px;
