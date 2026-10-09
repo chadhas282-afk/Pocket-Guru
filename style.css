@@ -498,3 +498,8 @@ tbody tr:hover td {
     align-items: flex-start;
     gap: 0.5rem;
   }
+  .greeting {
+    font-size: 1.6rem;
+  }
+  .large-input input {
+    font-size: 1.5rem;
