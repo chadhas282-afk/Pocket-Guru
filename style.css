@@ -528,3 +528,8 @@ tbody tr:hover td {
   .score-badge {
     width: 100%;
     text-align: center;
+    }
+  .summary-stats {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
