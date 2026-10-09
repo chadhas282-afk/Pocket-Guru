@@ -438,3 +438,8 @@ td:last-child {
 tbody tr {
   transition: all 0.2s ease;
 }
+tbody tr:hover td {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--glass-border);
+}
+.category-badge {
