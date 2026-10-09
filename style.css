@@ -523,3 +523,8 @@ tbody tr:hover td {
   .results-header {
     flex-direction: column;
     align-items: flex-start;
+    gap: 1rem;
+  }
+  .score-badge {
+    width: 100%;
+    text-align: center;
