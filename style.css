@@ -423,3 +423,8 @@ th {
 }
 td {
   padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+td:first-child {
