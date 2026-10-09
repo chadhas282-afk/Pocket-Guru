@@ -533,3 +533,8 @@ tbody tr:hover td {
     flex-wrap: wrap;
     gap: 1rem;
   }
+  .stat-item {
+    flex: 1 1 40%;
+  }
+  .toast-container {
+    left: 10px;
