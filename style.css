@@ -473,3 +473,8 @@ tbody tr:hover td {
     padding: 1rem 1.5rem;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+  }
+  .brand {
+    margin-bottom: 0;
+  }
