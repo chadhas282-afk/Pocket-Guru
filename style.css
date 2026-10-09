@@ -543,3 +543,8 @@ tbody tr:hover td {
     align-items: center;
   }
   .toast {
+    width: 100%;
+    justify-content: center;
+  }
+}
+.toast-container {
