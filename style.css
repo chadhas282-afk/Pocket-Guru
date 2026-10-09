@@ -518,3 +518,8 @@ tbody tr:hover td {
     gap: 1rem;
   }
   .action-buttons button {
+     width: 100%;
+  }
+  .results-header {
+    flex-direction: column;
+    align-items: flex-start;
