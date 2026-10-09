@@ -563,3 +563,8 @@ tbody tr:hover td {
   border: 1px solid var(--primary-neon);
   color: #fff;
   padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.2);
+  animation: slideInRight 0.3s ease-out forwards;
+  display: flex;
+  align-items: center;
