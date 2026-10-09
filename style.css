@@ -488,3 +488,8 @@ tbody tr:hover td {
     padding: 1.5rem;
   }
 }
+
+@media (max-width: 600px) {
+  .main-content {
+    padding: 1rem;
+  }
