@@ -463,3 +463,8 @@ tbody tr:hover td {
   animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 @media (max-width: 900px) {
+  .dashboard-layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
