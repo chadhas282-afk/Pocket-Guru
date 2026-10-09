@@ -418,3 +418,8 @@ th {
   font-weight: 500;
   color: var(--text-muted);
   font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+td {
+  padding: 1rem;
