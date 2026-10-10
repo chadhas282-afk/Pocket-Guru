@@ -623,3 +623,8 @@ tbody tr:hover td {
   font-size: 1.1rem;
   margin-bottom: 2rem;
 }
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
