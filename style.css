@@ -598,3 +598,8 @@ tbody tr:hover td {
 .modal-overlay.hidden {
   opacity: 0;
   pointer-events: none;
+  }
+.modal-box {
+  background: var(--bg-base);
+  padding: 2.5rem;
+  text-align: center;
