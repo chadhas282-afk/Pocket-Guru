@@ -653,3 +653,8 @@ tbody tr:hover td {
 .loader-logo {
   width: 100%;
   height: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(6, 182, 212, 0.5);
+}
+.glow-text {
+  font-size: 1.5rem;
