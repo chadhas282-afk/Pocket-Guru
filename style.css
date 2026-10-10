@@ -628,3 +628,8 @@ tbody tr:hover td {
   justify-content: center;
   gap: 1rem;
 }
+.loading-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
