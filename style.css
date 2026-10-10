@@ -608,3 +608,8 @@ tbody tr:hover td {
   max-width: 400px;
   width: 90%;
   border: 1px solid var(--primary-neon);
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.2);
+}
+.modal-overlay.hidden .modal-box {
+  transform: scale(0.9);
+}
