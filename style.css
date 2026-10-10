@@ -658,3 +658,8 @@ tbody tr:hover td {
 }
 .glow-text {
   font-size: 1.5rem;
+  color: var(--primary-neon);
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+  animation: pulse 1.5s infinite ease-in-out;
+  font-weight: 600;
+}
