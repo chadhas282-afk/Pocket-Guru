@@ -613,3 +613,8 @@ tbody tr:hover td {
 .modal-overlay.hidden .modal-box {
   transform: scale(0.9);
 }
+.modal-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
