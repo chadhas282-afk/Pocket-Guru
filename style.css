@@ -673,3 +673,8 @@ tbody tr:hover td {
   height: 15px;
   width: 100%;
   border-radius: 8px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+@keyframes shimmer {
