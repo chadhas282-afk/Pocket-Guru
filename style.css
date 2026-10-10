@@ -618,3 +618,8 @@ tbody tr:hover td {
   margin-bottom: 1rem;
   color: #fff;
 }
+.modal-box p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
